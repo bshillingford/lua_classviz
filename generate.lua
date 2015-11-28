@@ -1,11 +1,18 @@
 require "torch"
 
 if #arg < 1 then
-  print("Expected at least one package to require.")
-  print("Use -lclassic to monitor classic classes instead. (see github.com/deepmind/classic)")
-  print("")
-  print("Usage: th [-lclassic] generate.lua output_mode package1 [package2 [package3 ...]]")
-  print("where output_mode is htmld3force, htmld3hier, graphviz, ...") -- TODO
+  print[[
+Expects at least one package to require.
+Use -lclassic to monitor classic classes instead. (see github.com/deepmind/classic)")
+
+Usage:
+  th [-lclassic] generate.lua output_mode package1 [package2 [package3 ...] ]
+where output_mode is htmld3force, htmld3tree. See e.g. htmld3tree.lua.
+Output is to stdout; redirect it to a file like output.html.
+
+Example:
+  th generate.lua htmld3tree nn > output.html
+]]
   os.exit(1)
 end
 

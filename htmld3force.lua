@@ -32,8 +32,6 @@ return function(arg, main)
       z-order: 1000;
       fill: blue;
       font-size: 1.3em;
-      -webkit-filter: drop-shadow( -3px -3px 3px #fff );
-      filter: drop-shadow( -3px -3px 3px #fff );
     }
     </style>
     </head>
